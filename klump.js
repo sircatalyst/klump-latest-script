@@ -23,6 +23,7 @@ var styles = `
 	line-height: 1rem;
 	font-weight: 400;
 	padding-left: 0.5rem;
+
 }
 .klump__underline {
 	text-decoration: underline;
@@ -31,7 +32,7 @@ var styles = `
 	cursor: pointer !important;
 }
 `;
-const base_checkout_url = 'https://elastic-kilby-0d4f88.netlify.app';
+const base_checkout_url = 'https://checkout-deployed-test.netlify.app';
 var styleSheet = document.createElement('style');
 styleSheet.type = 'text/css';
 styleSheet.innerText = styles;

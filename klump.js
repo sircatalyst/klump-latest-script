@@ -152,6 +152,38 @@ class KlumpPopUp {
         this.amount = amount;
     }
     payWithKlump() {
+        
+        var data = {
+            amount: 9393939393,
+            currency: 'USD',
+            items: [
+                {
+                    image_url:
+                        'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+                    item_link: 'https://www.paypal.com/in/webapps/mpp/home',
+                    name: 'Awesome item',
+                    price: '9.99',
+                },
+                {
+                    image_url:
+                        'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+                    item_link: 'https://www.paypal.com/in/webapps/mpp/home',
+                    name: 'Awesome item',
+                    price: '9.99',
+                },
+                {
+                    image_url:
+                        'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+                    item_link: 'https://www.paypal.com/in/webapps/mpp/home',
+                    name: 'Awesome item',
+                    price: '9.99',
+                },
+            ],
+            customer: {
+                email: 'iamnedu912@gmail.com',
+                id: '12',
+            },
+        };
         if (this.flag) {
             /*
              * Pay in 4 Demo
@@ -177,7 +209,7 @@ class KlumpPopUp {
             iFrame.onload = function () {
                 iFrame.contentWindow.postMessage(
                     JSON.stringify({
-                        data: 'data',
+                        data: data,
                     }),
                     base_checkout_url
                 );

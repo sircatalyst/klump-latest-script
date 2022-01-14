@@ -1,5 +1,3 @@
-const { verify } = require("crypto");
-
 var styles = `
 .klump__div {
 	padding: 0.5rem;

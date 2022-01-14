@@ -1,3 +1,5 @@
+const { verify } = require("crypto");
+
 var styles = `
 .klump__div {
 	padding: 0.5rem;
@@ -169,6 +171,14 @@ class KlumpPopUp {
             iFrame.setAttribute('id', 'checkout');
             iFrame.style.cssText =
                 '\nborder: 0px none transparent;\noverflow-x: hidden;\noverflow-y: hidden;\nmargin: 0;\npadding: 0;\n-webkit-tap-highlight-color: transparent;\n-webkit-touch-callout: none; position: fixed;\nleft: 0;\ntop: 0;\nwidth: 100%;\nheight: 100%;)';
+            iFrame.onload = function () {
+                iFrame.contentWindow.postMessage(
+                    JSON.stringify({
+                        data: 'data',
+                    }),
+                    base_checkout_url
+                );
+            };
             body.appendChild(iFrame);
         }
     }

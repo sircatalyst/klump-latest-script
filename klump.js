@@ -35,7 +35,7 @@ var styles = `
 }
 `;
 // const base_checkout_url = 'https://checkout-deployed-test.netlify.app';
-const base_checkout_url = 'https://lucid-darwin-122d30.netlify.app/';
+const base_checkout_url = 'https://lucid-darwin-122d30.netlify.app';
 var styleSheet = document.createElement('style');
 styleSheet.type = 'text/css';
 styleSheet.innerText = styles;

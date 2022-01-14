@@ -90,6 +90,11 @@ function klumpCalculate(params = 0) {
     return params !== 0 ? params / 4 : 0;
 }
 
+// klumpSuccess function
+function klumpOnSuccess() {
+    return fireKlumpSuccess();
+}
+
 var klumpValue = klumpCalculate(100);
 
 // Klump Calculate
@@ -226,6 +231,12 @@ window.addEventListener('message', (event) => {
     const background = document.getElementById('background');
     if (event.origin === base_checkout_url) {
         const checkOutData = JSON.parse(event.data);
+        if(true) {
+            function fireKlumpSuccess(param) {
+                return ['good', param];
+            }
+            fireKlumpSuccess(checkOutData)
+        }
         if (
             'closeCheckoutId' in checkOutData &&
             'openCheckoutId' in checkOutData &&
